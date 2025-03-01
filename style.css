@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
 body {
     margin: 0px;
     /* overflow: hidden; */
@@ -5,6 +9,11 @@ body {
 
 html {
     font-size: 16px;  /* Base font size */
+}
+
+@font-face {
+    font-family: 'Transcity';
+    src: url('DEMO.otf') format('opentype');
 }
 
 .headerClass {
@@ -23,14 +32,17 @@ html {
 }
 
 .headerClass h1 {
-    font-family: 'Amiri', serif;
+    font-family: 'Train One', sans-serif;
     font-size: 2em; /* Adjust the value as needed */
     color: #FFD700;
     animation: glow 1.5s infinite alternate;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Train One', sans-serif;
+}
+
 @keyframes glow {
-    /* ... your existing glow animation ... */
     0% {
         text-shadow: 0 0 5px #ffd70038, 0 0 10px #ffd70038, 0 0 15px #ffd70038, 0 0 20px #ffd70038, 0 0 25px #ffd70038, 0 0 30px #ffd70038, 0 0 35px #ffd70038
     }
