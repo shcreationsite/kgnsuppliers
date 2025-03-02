@@ -26,7 +26,7 @@ html {
 
 .headerClass h1 {
     font-family: 'Lemonada', sans-serif;
-    font-size: 1.7em; /* Adjust the value as needed */
+    font-size: 1.5em; /* Adjust the value as needed */
     color: #FFD700;
     animation: glow 1.5s infinite alternate;
 }
