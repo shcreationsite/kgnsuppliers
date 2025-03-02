@@ -3,22 +3,24 @@
 body {
     margin: 0px;
     /* overflow: hidden; */
-    background-image: url('bodybackgroundimage.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1; /* Ensure body content is above the background */
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Change to fixed to cover the entire viewport */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit;
-    filter: blur(10px);
-    z-index: -1;
+    background-image: url('bodybackgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Apply blur effect */
+    z-index: -1; /* Ensure it stays behind the body content */
 }
 
 html {
@@ -26,6 +28,7 @@ html {
 }
 
 .headerClass {
+   
     height: 15vh;
     background-image: url('HeaderBackGround.jpg');
     background-size: cover;
