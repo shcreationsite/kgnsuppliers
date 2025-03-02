@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap');
+
 body {
     margin: 0px;
     /* overflow: hidden; */
@@ -23,10 +25,14 @@ html {
 }
 
 .headerClass h1 {
-    font-family: 'Amiri', serif;
+    font-family: 'Lemonada', sans-serif;
     font-size: 2em; /* Adjust the value as needed */
     color: #FFD700;
     animation: glow 1.5s infinite alternate;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lemonada', sans-serif;
 }
 
 @keyframes glow {
