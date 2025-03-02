@@ -3,6 +3,22 @@
 body {
     margin: 0px;
     /* overflow: hidden; */
+    background-image: url('bodybackgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
 }
 
 html {
