@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap');
+
+body {
+    margin: 0px;
+    /* overflow: hidden; */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1; /* Ensure body content is above the background */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Change to fixed to cover the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('bodybackgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Apply blur effect */
+    z-index: -1; /* Ensure it stays behind the body content */
+}
+
+html {
+    font-size: 16px;  /* Base font size */
+}
+
+.headerClass {
+    height: 15vh;
+    background-image: url('HeaderBackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0px 0;
+    top: 0;
+    width: 100%;
+    z-index: 1002;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerClass h1 {
+    font-family: 'Lemonada', sans-serif;
+    font-size: 1.5em; /* Adjust the value as needed */
+    color: #FFD700;
+    animation: glow 1.5s infinite alternate;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lemonada', sans-serif;
+    text-align: center;
+    color: maroon;
+}
+
+.navClassHeader {
+    top: 15vh; /* Adjust based on header height */
+    width: 100%;
+    background-color: #e9e3da; 
+    z-index: 1001;  /* Ensure nav is below header */
+    padding: 7px;
+    position: fixed;
+    margin-left: 38px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3c0000;
+    font-size: 1.2em;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease; /* Add transition for smooth animation */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007BFF;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+/* nav ul li a:hover {
+    color: #0056b3;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+} */
+
+nav ul li a:active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    background: rgba(255, 191, 0, 0.182);
+    border-radius: 10%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    padding: 7px;
+}
+
+nav ul li a:active::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+nav ul li a.selected {
+    color: #b30000;
+    font-weight: bold;
+    background-color: #ff000024; /* Add background color */
+    border-radius: 10px; /* Add border radius */
+    padding: 7px;
+}
+
+nav ul li a.selected::after {
+    width: 0; /* Remove underline */
+}
+
+@keyframes glow {
+    /* ... your existing glow animation ... */
+    0% {
+        text-shadow: 0 0 5px #ffd70038, 0 0 10px #ffd70038, 0 0 15px #ffd70038, 0 0 20px #ffd70038, 0 0 25px #ffd70038, 0 0 30px #ffd70038, 0 0 35px #ffd70038
+    }
+    50% {
+        text-shadow: 0 0 10px #ffd70038, 0 0 20px #ffd70038, 0 0 30px #ffd70038, 0 0 40px #ffd70038, 0 0 50px #ffd70038, 0 0 60px #ffd70038, 0 0 70px #ffd70038
+    }
+    100% {
+        text-shadow: 0 0 5px #ffd70038, 0 0 10px #ffd70038, 0 0 15px #ffd70038, 0 0 20px #ffd70038, 0 0 25px #ffd70061, 0 0 30px #ffd70080, 0 0 35px #ffd70091
+    }
+}
+
+.content {
+    display: block; /* Make content visible by default */
+    margin-top: 20vh; /* Ensure content is below the nav header */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Adjust to fit grid */
+    max-width: 550px; /* Set a maximum width */
+    height: 100%; /* Set a fixed height */
+    margin: auto;
+    overflow: hidden; /* Ensure images do not overflow */
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%; /* Ensure images cover the container */
+    object-fit: cover; /* Ensure images cover the container */
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Align vertically in the middle */
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background-color: rgba(128, 0, 0, 0.538);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: #800000;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .headerClass h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+}
