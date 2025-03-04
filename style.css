@@ -29,7 +29,7 @@ html {
 
 .headerClass {
     height: 15vh;
-    background-image: url('HeaderBackGround.jpg');
+    background-image: url('headbg2.jpg');
     background-size: cover;
     background-position: center;
     padding: 0px 0;
@@ -42,10 +42,18 @@ html {
     justify-content: center;
 }
 
+.glass-effect{
+    margin-top: 24px;
+}
+
+.glass-effect1{
+    margin-top: -28px;
+}
+
 .headerClass h1 {
     font-family: 'Lemonada', sans-serif;
     font-size: 1.5em; /* Adjust the value as needed */
-    color: #FFD700;
+    color: #3b045e;
     animation: glow 1.5s infinite alternate;
 }
 
@@ -60,9 +68,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     background-color: #e9e3da; 
     z-index: 1001;  /* Ensure nav is below header */
-    padding: 7px;
+    padding: 19px;
     position: fixed;
-    margin-left: 38px;
+  
+    /* margin-left: 38px; */
 }
 
 nav ul {
@@ -208,6 +217,10 @@ nav ul li a.selected::after {
 
 .next {
     right: 0;
+}
+
+.prev {
+    left: 0;
 }
 
 .prev:hover, .next:hover {
