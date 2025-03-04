@@ -249,6 +249,72 @@ nav ul li a.selected::after {
     animation-duration: 1.5s;
 }
 
+
+.tile {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.tile h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+
+.tile ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    overflow: hidden; /* Important for transition */
+    height: 0;          /* Initially hide the list */
+    transition: height 0.3s ease; /* Smooth transition */
+}
+
+.tile li {
+    font-size: 1em;
+    font-family: 'Lemonada', sans-serif;
+}
+
+.tile.active ul {
+    height: auto;   /* Let the height adjust automatically when active */
+}
+
+.container {
+    display: flex;             /* Enable flexbox */
+    flex-wrap: wrap;          /* Allow tiles to wrap to the next row */
+    justify-content: center;  /* Center tiles horizontally */
+}
+
+footer {
+    
+    /* background: rgb(255, 141, 1); */
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1001; /* Ensure footer is above content */
+}
+
+.footer-text {
+    background-image: url('HeaderBackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: #ffffff;
+    text-align: right;
+    padding-right: 20px;
+}
+
 @-webkit-keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
