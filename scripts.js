@@ -40,10 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Show the feature content when the Features nav link is clicked
-    document.querySelector('a[data-target="featureContent"]').addEventListener('click', function() {
-        document.getElementById('featureContent').style.display = 'block';
-    });
+    // Show the about content when the page loads
+    document.getElementById('aboutContent').style.display = 'block';
+    document.getElementById('featureContent').style.display = 'none';
 
     // Initialize slideshows
     initSlideshows();
