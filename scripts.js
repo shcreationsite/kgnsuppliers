@@ -81,3 +81,21 @@ function initSlideshows() {
         }
     });
 }
+
+function toggleTile(tile) {
+    const list = tile.querySelector('ul'); // Get the UL element inside the clicked tile
+
+    if (tile.classList.contains('active')) {
+        // If tile is already active, set height to 0 before removing 'active'
+        list.style.height = '0';
+        setTimeout(() => { // Use setTimeout to ensure the height transition has time to complete before removing the class
+           tile.classList.remove('active');
+        }, 300); //Match the transistion duration i.e 0.3s
+    } else {
+        // If tile is inactive, set height to auto, which will automatically calculate its needed height
+        tile.classList.add('active');
+        list.style.height = list.scrollHeight + 'px'; //Set explict height to transtion works
+    }
+
+
+}
