@@ -37,12 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show the target content section
             const targetId = this.getAttribute('data-target');
             document.getElementById(targetId).style.display = 'block';
+
+            // Show both the Google form and the contact details when the "Contact" nav header is clicked
+            if (targetId === 'contactContent') {
+                document.getElementById('googleForm').style.display = 'block';
+                document.getElementById('contactDetails').style.display = 'block';
+            }
         });
     });
 
     // Show the about content when the page loads
     document.getElementById('aboutContent').style.display = 'block';
     document.getElementById('featureContent').style.display = 'none';
+    document.getElementById('contactContent').style.display = 'none';
 
     // Initialize slideshows
     initSlideshows();
@@ -96,6 +103,4 @@ function toggleTile(tile) {
         tile.classList.add('active');
         list.style.height = list.scrollHeight + 'px'; //Set explict height to transtion works
     }
-
-
 }
