@@ -168,6 +168,9 @@ nav ul li a.selected::after {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    justify-content: center; /* Center the grid containers horizontally */
+    margin: 0 auto; /* Center the grid container itself */
+    max-width: 1200px; /* Set a maximum width for the container */
 }
 
 .grid-item {
