@@ -360,6 +360,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center; /* Vertically center the contact-info */
 }
 
 .contact-info {
