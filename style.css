@@ -254,7 +254,7 @@ nav ul li a.selected::after {
 
 
 .tile {
-    background-color: #f5d682;
+    background-color: #f5d68270;
     border: 1px solid #ddd;
     padding: 15px;
     margin: 10px;
