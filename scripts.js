@@ -59,7 +59,9 @@ function initSlideshows() {
     const slideshows = [
         {slides: 'mySlides1'},
         {slides: 'mySlides2'},
-        {slides: 'mySlides3'}
+        {slides: 'mySlides3'},
+        {slides: 'mySlides4'},
+        {slides: 'mySlides5'}
     ];
 
     slideshows.forEach((slideshow, index) => {
